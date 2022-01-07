@@ -14,9 +14,9 @@ $x = isset($arrayParams['x'])?$arrayParams['x']:0;
 $x = (float) $x; // settype($x, 'float');
 $y =  isset($arrayParams['y'])?$arrayParams['y']:0;
 $y = (float) $y; // settype($y, 'float');
-$token_check = isset($arrayParams['token'])?$arrayParams['token']:0;
+$tokenCheck = isset($arrayParams['token'])?$arrayParams['token']:0;
 
- if (!($token===$token_check)) {
+ if (!($token===$tokenCheck)) {
     header("HTTP/1.1 401 Unauthorized");
     exit();	 
  }
