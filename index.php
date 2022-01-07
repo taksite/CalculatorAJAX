@@ -16,12 +16,6 @@
         // echo 'var script_adres  = "'.$actual_link.'";';
     ?>
 
-function changeColor(newColor)
-{
- var elem = document.getElementById("para1");
- elem.style.color = newColor;
-}
-
 </script>
 <script src="calc.js"></script>
 </head>
