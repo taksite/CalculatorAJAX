@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext);
+html
+{
+    background-color:rgba(238, 238, 238, 0.144);font-size:16px
+}
+    body,body *
+{
+    font-family:'Open Sans',sans-serif;box-sizing:border-box
+}
+button
+{
+    width: 150px;
+    background-color: #3f51b5;
+    font-size: 24px;
+    color: white;
+    padding: 15px 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;    
+}
+input[type=text],
+input[type=password]
+	{
+		margin-left:auto;
+		margin-right:auto;	
+		width: 290px;
+		background-color: #efefef;
+		color: #666;
+		border: 2px solid #ddd;
+		border-radius: 5px;
+		font-size: 18px;		/* pole input nie dziedziczy font size */
+		padding: 10px;
+		box-sizing: border-box; /* wyrównuje input z butonem */
+		outline: none;			/* brak obramowania */
+		margin-top: 10px;
+	}
+#result
+{
+    font-size: 38px;   
+}
+#error
+{
+    font-size: 34px;   
+    color: red;
+}
