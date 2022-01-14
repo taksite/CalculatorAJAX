@@ -31,10 +31,10 @@ input[type=password]
 		color: #666;
 		border: 2px solid #ddd;
 		border-radius: 5px;
-		font-size: 18px;		/* pole input nie dziedziczy font size */
+		font-size: 18px;		/* input field does not inherit font size */
 		padding: 10px;
-		box-sizing: border-box; /* wyrównuje input z butonem */
-		outline: none;			/* brak obramowania */
+		box-sizing: border-box; /*aligns the input with the button */
+		outline: none;			/* no border */
 		margin-top: 10px;
 	}
 #result
