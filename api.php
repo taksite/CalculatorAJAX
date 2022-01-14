@@ -94,6 +94,7 @@ class Calculator {
 
 	private float $x;
 	private float $y;
+	// allowed methods:
 	private array $method = [
 								'divide', 
 								'multiply',
@@ -109,15 +110,21 @@ class Calculator {
 
 	public function test () : string
 	{
+		$template = (string) "./template/result_tpl.php";
+		$table = [];
+		$table = [
+			'x' 			=> $this->x,
+			'y' 			=> $this->y,
+			'addition'		=> $this->add(),
+			'subtraction'	=> $this->sub(),
+			'multiply'		=> $this->multiply(),
+			'divide'		=> $this->divide()
+		];
+        $content = View::templateToHtml($template, $table);	
+
 		$template = (string) "./template/Index_tpl.php";
         $table = [
-            'content' => "<br />
-						  Variable: X:{$this->x} Y:{$this->y}
-						  <br /> addition: {$this->add()}
-						  <br /> subtraction: {$this->sub()}
-						  <br /> multiply: {$this->multiply()}
-						  <br /> divide: {$this->divide()}	 
-						  ",    
+            'content' => $content
         ];                       
         $content = View::templateToHtml($template, $table);	
 		return $content;
