@@ -15,7 +15,6 @@
         echo 'var token = "'.$token."\";\n";
         // echo 'var script_adres  = "'.$actual_link.'";';
     ?>
-
 </script>
 <script src="calc.js"></script>
 </head>
@@ -35,7 +34,7 @@
         <button id="divide">/</button>
         <button id="add">+</button>
         <button id="sub">-</button>
-        <button id="test">All results</button>
+        <button id="all_result">All results</button>
 
     </div>
 

@@ -23,9 +23,9 @@ function isNumericField(id,success){
 $(document).ready(function(){
 
 	
-    $("#test").click(
+    $("#all_result").click(
 		function() {
-			getResult("test");
+			getResult("allresult");
 		}	
 	);
 

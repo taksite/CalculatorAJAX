@@ -100,7 +100,7 @@ class Calculator {
 								'multiply',
 								'add',
 								'sub',
-								'test'
+								'allresult'
 							];
 
 	public function __construct (float $x, float $y) {
@@ -108,7 +108,7 @@ class Calculator {
 		$this->y = $y;
 	}
 
-	public function test () : string
+	public function allresult () : string
 	{
 		$template = (string) "./template/result_tpl.php";
 		$table = [];
