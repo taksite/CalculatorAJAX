@@ -35,6 +35,8 @@
         <button id="divide">/</button>
         <button id="add">+</button>
         <button id="sub">-</button>
+        <button id="test">All results</button>
+
     </div>
 
 </div>

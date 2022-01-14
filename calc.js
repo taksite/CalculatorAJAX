@@ -22,6 +22,13 @@ function isNumericField(id,success){
 
 $(document).ready(function(){
 
+	
+    $("#test").click(
+		function() {
+			getResult("test");
+		}	
+	);
+
     $("#multiply").click(
 		function() {
 			getResult("multiply");

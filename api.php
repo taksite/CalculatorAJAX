@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+require_once("./Utils/debug.php");
+require_once("./Utils/autoload.php");
+
+use Api\View\View;
+
 $token = "ljNTdKmx805GSm1kUDy4FI1";
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -94,6 +99,7 @@ class Calculator {
 								'multiply',
 								'add',
 								'sub',
+								'test'
 							];
 
 	public function __construct (float $x, float $y) {
@@ -101,6 +107,21 @@ class Calculator {
 		$this->y = $y;
 	}
 
+	public function test () : string
+	{
+		$template = (string) "./template/Index_tpl.php";
+        $table = [
+            'content' => "<br />
+						  Variable: X:{$this->x} Y:{$this->y}
+						  <br /> addition: {$this->add()}
+						  <br /> subtraction: {$this->sub()}
+						  <br /> multiply: {$this->multiply()}
+						  <br /> divide: {$this->divide()}	 
+						  ",    
+        ];                       
+        $content = View::templateToHtml($template, $table);	
+		return $content;
+	}
 
 	public function multiply () : float
 	{
